@@ -30,7 +30,7 @@ return (<div>
                         <td>{mobile.description}</td>
                         <td>{mobile.price}</td>
                         <td>{mobile.rating}</td>
-                        <td>{mobile.instock}</td>
+                        <td>{mobile.instock? <h4>Yes</h4> :<h4>No</h4> }</td>
                     </tr>
                 ))
             }
