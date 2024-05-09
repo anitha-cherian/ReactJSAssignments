@@ -1,0 +1,35 @@
+1.When the application is loaded for the first time all useEffects are getting invoked
+------------------------------------
+ Counter state changed: 0
+ Name state changed: 
+ This meaage from empty useEfect,Name:  
+ This meaage from empty useEfect,Counter:  0
+ This message is from useEffectName:  
+ This message is from useEffectCounter:  0
+ This message from useEffect Name and Counter, Name:  
+ This message from useEffect Name and Counter, Counter:  0
+ Counter state changed: 0
+ Name state changed: 
+ This meaage from empty useEfect,Name:  
+ This meaage from empty useEfect,Counter:  0
+ This message is from useEffectName:  
+ This message is from useEffectCounter:  0
+ This message from useEffect Name and Counter, Name:  
+ This message from useEffect Name and Counter, Counter:  0
+ 
+ 2. When Name is entered, useEffect without dependency array, useEffect with name as dependency array,useEffect with name and counter as dependency array are getting invoked.
+ -------------------------
+ Counter state changed: 0
+ Name state changed: a
+ This message is from useEffectName:  a
+ This message from useEffect Name and Counter, Name:  a
+ This message from useEffect Name and Counter, Counter:  0
+ 
+ 3. When Counter is incremented, useEffect without dependency array, useEffect with name as dependency array,useEffect with counterter as dependency array,useEffect with name and counter as dependency array are getting invoked. Here useEffect with name as dependency array is invoked as the Name field is apended with 'a' everytime the counter is incremented
+ -----------------------------------
+ Counter state changed: 1
+ Name state changed: aa
+ This message is from useEffectName:  aa
+ This message is from useEffectCounter:  1
+ This message from useEffect Name and Counter, Name:  aa
+ This message from useEffect Name and Counter, Counter:  1
